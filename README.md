@@ -41,11 +41,29 @@ Users should be able to:
 
 Utilising margin: 0 auto as per below means that the paragraph will sit centrally within its parent container. Its a great way to center an element.
 
+Also utilised a GRID wiht NAMED AREAS. The below is how this was achieved.
+
 ```css
 header > p {
     margin: 0 auto;
     width: 50%;
     font-size: 0.8rem;
+}
+
+.grid-container {
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 2em 2em;
+    grid-template-areas:
+        ". Area2 ."
+        "Area1 Area2 Area4"
+        "Area1 Area3 Area4"
+        ". Area3 .";
+    margin-bottom: 3rem;
 }
 ```
 
